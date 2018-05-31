@@ -5,7 +5,7 @@ The voting system should fulfill the following criteria:
 
 2) Reputation grows if user's vote is in consensus with community's votes 
    * a) various ways to predefine what "consensus" does mean
-   idea: determine consensus in periods of a week
+   idea: determine consensus in periods of a week 
    * b)!!! but users should not be able to vote for apps they haven't used only to get rewarded and users should not be motivated to vote for apps only because they already have a high number of votes and therefore are sure to 
    be in consensus
    idea: reward could be higher for the first voters
