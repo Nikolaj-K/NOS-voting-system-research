@@ -1,2 +1,3 @@
 ### NOS-voting-system-research
-see dump.md
+
+-> see `thought-dump.md`
