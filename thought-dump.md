@@ -35,6 +35,8 @@ The voting system should fulfill the following criteria:
 10) data onchain/offchain? 
 
 11) calculation costs
+
+13) for a listed ranking, a dApp should only be added to the average if it has a certain number of votes
    
 Exploration of other platform's (blockchain and centralized ones') voting systems (TODO/WIP): 
 
