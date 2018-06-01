@@ -50,3 +50,51 @@ Exploration of other platform's (blockchain and centralized ones') voting system
     * riskbazaar
     * drep.org
     * stackexchange
+    
+    
+################ quick notes, todo: cleanup
+
+
+
+### Blockchain related:
+	* 
+
+### Retailer related:
+	* Amazon:
+		Ranking factors: (https://startupbros.com/rank-amazon/)
+		
+		*Conversion Rate Factors:
+		- Sales Rank
+		- Customer Reviews
+		- Answered Questions <--- add as factor to platform highlight algorithm
+		- Image Size & Quality
+		- Price
+		- Parent-Child Products
+		- Time on Page & Bounce Rate
+		- Product Listing Completeness
+
+		* Relevancy Factors
+		- Title
+		- Features / Bullet Points
+		- Product Description
+		- Brand & Manufacturer Part #
+		- Specifications
+		- Category & Sub-Category
+		- Search terms
+		- Source Keyword
+		
+		* Customer Satisfaction & Retention Factors
+		- Negative Seller Feedback
+		- Order Processing Speed
+		- In-Stock Rate
+		- Perfect Order Percentage (POP)
+		- Order Defect Rate (ODR)
+		- Exit Rate
+		- Packaging Options
+
+
+### Gaming: 
+	* 
+
+TODO: 
+* for whitepaper: make USER EXPERIENCE section 
