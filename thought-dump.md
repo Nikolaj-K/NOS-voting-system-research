@@ -36,7 +36,7 @@ The voting system should fulfill the following criteria:
 
 11) calculation costs
 
-13) for a listed ranking, a dApp should only be added to the average if it has a certain number of votes
+12) for a listed ranking, a dApp should only be added to the average if it has a certain number of votes. This number can be a pecentage of the user base, but shouldn't grow too high (so that new dApps can be added even if the user base is huge)
    
 Exploration of other platform's (blockchain and centralized ones') voting systems (TODO/WIP): 
 
