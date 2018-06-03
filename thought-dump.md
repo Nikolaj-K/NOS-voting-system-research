@@ -91,6 +91,35 @@ Exploration of other platform's (blockchain and centralized ones') voting system
 		- Order Defect Rate (ODR)
 		- Exit Rate
 		- Packaging Options
+	
+	* ebay: 
+		+) evaluation of sellers (quite simple): 
+
+		standard evaluation, given by verified buyers:
+			-positive vote: + 1 point
+			-neutral vote: 0 points
+			-negative vote: -1 point
+			-one vote per buyer per week (Mon- Sun) is counted 
+			-13 different levels of rating of the sellers, symbolized by differently coloured stars
+
+		detailed evaluation, may be given after the standard evaluation: 
+			-1-5 stars (voting points) for each of 4 categories (article, communication, sender time, shipping 						costs) possible
+			-independent from the standard evaluation, doesn't affect it
+			-one rating per purchase possible
+			-is are shown only if there are at least 10 detailed evaluations
+
+		+) evaluation of buyers (unimportant for nOS-purposes)
+			-buyers can be evaluated by the sellers, but only positive votes are possible
+
+		evaluations can be edited if both parties do agree
+
+		+) evaluation of products: 
+			-1-5 stars (5 being the best) 
+			-in addition, there are 3 product-specific questions to answer (yes/no) 
+			-the average of the stars-rating and the percentage of positive answers to the questions are shown on the product 			   page
+			-also, people can write reviews; reviews can be given a positive or negative vote or can be reported
+		
+		(sources: https://pages.ebay.de/help/feedback/howitworks.html, https://verkaeuferportal.ebay.de/verkaeufer-news/2016-				fruehling/produktbewertungen-rezensionen, https://pages.ebay.de/help/feedback/questions/leave.html)
 
 
 ### Gaming: 
