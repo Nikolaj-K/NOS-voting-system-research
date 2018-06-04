@@ -57,7 +57,13 @@ Exploration of other platform's (blockchain and centralized ones') voting system
 
 
 ### Blockchain related:
-	* 
+	* Lisk:
+	-)delegate proof of stake --> one earns lisk by voting for delegates who share their rewards with their voters (max. number of 		  votes: 101) 
+	-)4 batches á max. 33 votes (max. 101 votes at altogether) to participate; 
+	-)to participate at a batch, one has to pay 1 lisk, which has to be in the lisk-wallet
+	-)(Open question: what happens, if voted delegators don't win --> is the paid lisk just lost?)
+	(source: https://earnlisk.com/)
+		
 
 ### Retailer related:
 	* Amazon:
@@ -123,7 +129,17 @@ Exploration of other platform's (blockchain and centralized ones') voting system
 
 
 ### Gaming: 
-	* 
+	*) VotingPlugin 
+	(some plugin for Minecraft)
+	allows one to give his players rewards by voting for his servers; 
+	types of rewards: 
+	-) for votes for one site
+	-) for voting on all of some specified sites
+	-) for the first vote
+	-) cummulative reward (vote x amount of times to be rewarded (per day/week)) 
+	-) for voting x number of times in a row
+	-) for x amount of global votes
+	(source: https://www.spigotmc.org/resources/votingplugin.15358/)
 
 TODO: 
 * for whitepaper: make USER EXPERIENCE section 
