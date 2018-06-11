@@ -127,6 +127,14 @@ Exploration of other platform's (blockchain and centralized ones') voting system
 		
 		(sources: https://pages.ebay.de/help/feedback/howitworks.html, https://verkaeuferportal.ebay.de/verkaeufer-news/2016-				fruehling/produktbewertungen-rezensionen, https://pages.ebay.de/help/feedback/questions/leave.html)
 
+### Q&A platform related:
+
+xxx
+	* StackExchange
+	* Quora
+	* Reddit
+	* News papers
+	* ...
 
 ### Gaming: 
 	*) VotingPlugin 
