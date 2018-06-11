@@ -1,4 +1,5 @@
-### Considerations: 
+## Considerations we want and what we don't want
+
 The voting system should fulfill the following criteria: 
 
 1) User's values: Reputation, Voting Power (reputation and voting power should be dependent, reputation = voting power possible)
@@ -54,8 +55,7 @@ Exploration of other platform's (blockchain and centralized ones') voting system
     
 ################ quick notes, todo: cleanup
 
-
-
+## Overview of existing systems
 ### Blockchain related:
 	* Lisk:
 	-)delegate proof of stake --> one earns lisk by voting for delegates who share their rewards with their voters (max. number of 		  votes: 101) 
@@ -143,3 +143,7 @@ Exploration of other platform's (blockchain and centralized ones') voting system
 
 TODO: 
 * for whitepaper: make USER EXPERIENCE section 
+
+## Algorithm details
+
+See file `pseudo-codes.py`
