@@ -1,14 +1,23 @@
 import operator
 import math
 
-## utility functions
-def mean(L): return sum(L) / float(len(L))
-def in_interval(x, a, b): return a<x and x<=b
-def variance(L): return sum(map(lambda x: x*x, L)) / float(len(L))
-def to_rating_dict(L): return {key: float(len(L)-i)/len(L) for i, key in enumerate(L)
-
 VARIANCE_HALF = 0.01
-def model(variance): return (1 + variance / varhalf)**-1
+
+## utility functions
+def to_rating_dict(L): 
+    return {key: float(len(L)-i)/len(L) for i, key in enumerate(L)}
+
+def is_in_interval(x, a, b): 
+    return a<x and x<=b
+
+def mean(L): 
+    return sum(L) / float(len(L))
+
+def variance(L): 
+    return sum(map(lambda x: x*x, L)) / float(len(L))
+
+def model(v): 
+    return 1 / (1 + v / VARIANCE_HALF)
 
 FRUITS = {'apple', 'peach', 'banana', 'cherry', 'orange', 'pear', 'kiwi'}
 GRADES = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'E+', 'E', 'F']
@@ -79,6 +88,6 @@ for f, r in fruit_user_ratings_means.items():
         i_grade = GRADES[i]
         b = grade_bases[i_grade]
         a = grade_bases[GRADES[i+1]] if i<len(GRADES)-1 else 0
-        if in_interval(r, a, b):
+        if is_in_interval(r, a, b):
             print('{} is ranked {}'.format(f, grade_i))
     
