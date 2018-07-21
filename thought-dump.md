@@ -178,11 +178,4 @@ Reward for both quality and quantity, and both should be necessary
 * Reward for writing reviers, judged on quality
 
 ### Rewards
-S(n) ... stake of user n 
-V(n) ... "how well" they voted
-N=sum over n such that n voted right (that will be rewards) ... all users
-M ... total reward
-x ... fraction of non-stakedependent rewards
-R(n) = (x * M) * f(v) + ((1-x) * M) g(n,S(n)) 
-	where f(v) says how good they voted, sum over f(v) is 1
-	and where g(n,s) depends on the stake  where n-sum over g(n,s) is 1
+See python script
