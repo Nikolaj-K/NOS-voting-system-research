@@ -10,7 +10,7 @@
 		
 1.1) Gain from being votes high up.
 
-2) We're first going to give and overview of properties of voting systems (viewed on their own). 
+2) We're first going to give an overview of properties of voting systems (viewed on their own). 
 
 3) Then rule out and classify for the means of a) and b)
 
@@ -46,8 +46,18 @@ http://www.aceproject.org/ (todo)
 
 ###### Wikipedia
 
+Bucklin voting/The Grand Junction System: 
+Used to determine a single winner.
+Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
+To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
+The number of votes each candidate got at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
 
-https://en.wikipedia.org/wiki/Bucklin_voting (todo)
+https://en.wikipedia.org/wiki/Bucklin_voting 
+https://de.wikipedia.org/wiki/Bucklin-Wahl
+https://www.youtube.com/watch?v=CkIYZsJAvNQ
+
+
+
 https://en.wikipedia.org/wiki/First-past-the-post_voting (todo)
 https://en.wikipedia.org/wiki/Instant-runoff_voting (todo)
 https://en.wikipedia.org/wiki/Majority_judgment (todo)
