@@ -1,5 +1,13 @@
 ### NOS-voting-system-research
 
-`thought-dump.md` ... some summaries and some arguments we want to keep track of
+##### thought-dump.md
 
-`pseudo-code.py` ... implementation of one ranking round, using a mean for a bracket systems as well as resulting reward computation
+Some summaries and some arguments we want to keep track of. 
+
+Todo: Needs cleanup and made concise for whitepaper section.
+
+##### pseudo-codes.py
+
+Implementation of one ranking round, using a mean for a bracket systems as well as resulting reward computation.
+
+Todo: Depending on target platform, this could use a rewrite form procedual to class based.
