@@ -44,27 +44,55 @@ https://wiki.electorama.com/wiki/Special:AllPages
 ###### "Electorial Knowledge Network" website (todo)
 http://www.aceproject.org/ (todo)
 
-###### Wikipedia
+###### Wikipedia:
+
+##### First-past-the-post voting/Winner takes it all
+- Voters indicate on a ballot the candidate of their choice, and the candidate who receives the most votes wins. 
+- If there are at least two positions two be filled, each voter casts (up to) the same number of votes as there are positions to be filled, and those elected are the highest-placed candidates corresponding to that number of positions. 
+- (huge downside: it very much encourages tactical voting)
+- https://en.wikipedia.org/wiki/First-past-the-post_voting 
 
 ##### Bucklin voting/The Grand Junction System: 
-Used to determine a single winner. 
-
-Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
-To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
-The number of votes each candidate got at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
-
+- Usually used to determine a single winner. 
+- Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
+- To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
+- The number of votes each candidate received at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
 https://en.wikipedia.org/wiki/Bucklin_voting 
 https://de.wikipedia.org/wiki/Bucklin-Wahl
 https://www.youtube.com/watch?v=CkIYZsJAvNQ
 
+##### Majority judgement
+- Used to determine a single winner. 
+- Voters grade each candidate in one of several ranks, for instance named from "excellent" to "bad", and the candidate with the highest median grade is the winner.
+- The system's inventors mathematically proved that the system was the most "strategy-resistant" and therefore somehow immune to tactical voting.
+- The algorithm we propose is also based on the median grade. 
+https://en.wikipedia.org/wiki/Majority_judgment
+
+##### Approval voting
+- Usually used to determine a single winner. 
+- Each voter may select any number of candidates. The winner is the candidate who is selected ("approved") most often. 
+- Variation: each voter may only select a predetermined number of candidates, otherwise this person's cast votes are invalid. 
+- The algorithm we propose also allows each candidate to evaluate an arbitrary numer of candidates, but it is far from being some sort of approval voting. 
+https://www.electology.org/approval-voting
+https://de.wikipedia.org/wiki/Wahl_durch_Zustimmung
+
+##### Score voting/rate voting 
+- Used to determine a single winner. 
+- Voters rate candidates on a scale. The candidate with the highest rating wins.  
+- Variations of score voting can use a score-style ballot to elect multiple candidates simultaneously.
+
+TODOTODOTODO: comparison to majority judgement, approval voting and bucklin voting (similarities/differences)
+
+https://de.wikipedia.org/wiki/Majority_Judgment
+https://www.electology.org/score-voting
+https://en.wikipedia.org/wiki/Score_voting 
 
 
-https://en.wikipedia.org/wiki/First-past-the-post_voting (todo)
+
 https://en.wikipedia.org/wiki/Instant-runoff_voting (todo)
-https://en.wikipedia.org/wiki/Majority_judgment (todo)
 https://en.wikipedia.org/wiki/Open_list (todo)
 https://en.wikipedia.org/wiki/Preferential_voting (todo)
-https://en.wikipedia.org/wiki/Score_voting (todo)
+
 https://en.wikipedia.org/wiki/Ranked_voting (todo)
 
 
