@@ -14,11 +14,13 @@ def mean(L):
     return sum(L) / float(len(L))
 
 def variance(L): 
-    return sum(map(lambda x: x*x, L)) / float(len(L))
+    L2 = map(lambda x: x*x, L)
+    return mean(L2)
 
 def model(v): 
     return 1 / (1 + v / VARIANCE_HALF)
 
+## example ranking data (of fruits)
 FRUITS = {'apple', 'peach', 'banana', 'cherry', 'orange', 'pear', 'kiwi'}
 GRADES = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'E+', 'E', 'F']
 USERS = {'Alice', 'Bob', 'Carl'}
@@ -65,11 +67,11 @@ for user in USERS:
                 fruit_user_ratings[fruit][user] = fr
                 user_fruit_ratings[user][fruit] = fr
 
-## compute means
+## compute bracketed means
 fruit_user_ratings_means = {fruit: mean(rating_dict.values()) for fruit, rating_dict in fruit_user_ratings.items()}
 fruit_user_ratings_means_sorted = sorted(fruit_user_ratings_means.items(), key=operator.itemgetter(1))
 
-## voting game                     
+## voting "game"                 
 diff_abs = {u: {} for u in USERS}
 
 for user in USERS:
