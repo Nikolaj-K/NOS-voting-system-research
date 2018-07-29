@@ -390,6 +390,9 @@ Reward for both quality and quantity, and both should be necessary
 * Reward for writing reviers, judged on quality
 
 ### Rewards
+
+(note: The python file now contains a more elaborate variant of those ideas)
+
 S(n) ... stake of user n 
 V(n) ... "how well" they voted
 N=sum over n such that n voted right (that will be rewards) ... all users
@@ -398,3 +401,12 @@ x ... fraction of non-stakedependent rewards
 R(n) = (x * M) * f(v) + ((1-x) * M) g(n,S(n)) 
 	where f(v) says how good they voted, sum over f(v) is 1
 	and where g(n,s) depends on the stake  where n-sum over g(n,s) is 1
+	
+### On-chain requirements
+
+todo: Write a summary of requirements when it comes to storage and script execution
+
+tldr we need 
+	* User accounts with a tine by of on-chain data relating to past actons and current users rankings
+	* Readout of users ranking, computation of some numbers
+	* The result must definately be on-chain, and if the write-back to the user accounts is doable that would be great as well
