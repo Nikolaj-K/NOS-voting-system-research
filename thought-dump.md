@@ -83,6 +83,13 @@ https://de.wikipedia.org/wiki/Wahl_durch_Zustimmung
 
 TODOTODOTODO: comparison to majority judgement, approval voting and bucklin voting (similarities/differences)
 
+##### Closed list voting/Open list voting
+- Used when positions are to be filled by members of the running parties. 
+- Closed list voting: The voters only can vote for the parties. The elected parties have full decision over who of their members get the positions. 
+- Open list voting: Voters have at least some influence on the order in which a party's candidates are elected. (Example: The candidates are the party's members. Each party has a rank of their members. If a party's candidate reaches a certain quota of the votes, he gets the position even if he's not at the top of the party's list.)
+- These systems aren't of any use for our considerations. 
+- https://en.wikipedia.org/wiki/Closed_list; https://en.wikipedia.org/wiki/Open_list; https://en.wikipedia.org/wiki/Party-list_proportional_representation
+
 https://de.wikipedia.org/wiki/Majority_Judgment
 https://www.electology.org/score-voting
 https://en.wikipedia.org/wiki/Score_voting 
@@ -90,7 +97,7 @@ https://en.wikipedia.org/wiki/Score_voting
 
 
 https://en.wikipedia.org/wiki/Instant-runoff_voting (todo)
-https://en.wikipedia.org/wiki/Open_list (todo)
+https://en.wikipedia.org/wiki/Open_list
 https://en.wikipedia.org/wiki/Preferential_voting (todo)
 
 https://en.wikipedia.org/wiki/Ranked_voting (todo)
