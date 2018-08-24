@@ -52,15 +52,6 @@ http://www.aceproject.org/ (todo)
 - (huge downside: it very much encourages tactical voting)
 - https://en.wikipedia.org/wiki/First-past-the-post_voting 
 
-##### Bucklin voting/The Grand Junction System: 
-- Usually used to determine a single winner. 
-- Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
-- To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
-- The number of votes each candidate received at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
-https://en.wikipedia.org/wiki/Bucklin_voting 
-https://de.wikipedia.org/wiki/Bucklin-Wahl
-https://www.youtube.com/watch?v=CkIYZsJAvNQ
-
 ##### Majority judgement
 - Used to determine a single winner. 
 - Voters grade each candidate in one of several ranks, for instance named from "excellent" to "bad", and the candidate with the highest median grade is the winner.
@@ -76,6 +67,26 @@ https://en.wikipedia.org/wiki/Majority_judgment
 https://www.electology.org/approval-voting
 https://de.wikipedia.org/wiki/Wahl_durch_Zustimmung
 
+
+##### Closed list voting
+- Used when positions are to be filled by members of the running parties. 
+- Closed list voting: The voters only can vote for the parties. The elected parties have full decision over who of their members get the positions. 
+In praxis, the order in which a party's list candidates get elected can also be predetermined by districts. Then the voting system is called a "local list" system.  
+
+- These systems aren't of any use for our considerations. 
+- https://en.wikipedia.org/wiki/Closed_list; https://en.wikipedia.org/wiki/Party-list_proportional_representation
+
+
+
+
+#### Preferential voting/Preference voting: 
+May refer to different election systems or groups of election systems. Some authors consider preferentiality to be one of the characteristics by which electoral systems can be evaluated and classified. 
+Preferential voting may, for example, refer to ranked voting methods/ordinal voting systems, i.e. all election methods that involve ranking candidates in order of preference in a hierarchy on the ordinal scale, the most important ones being instant-runoff voting, single transferable vote and the Borda count. 
+instant-runoff voting
+range voting/score voting
+open list
+bucklin voting
+
 ##### Score voting/rate voting 
 - Used to determine a single winner. 
 - Voters rate candidates on a scale. The candidate with the highest rating wins.  
@@ -83,12 +94,36 @@ https://de.wikipedia.org/wiki/Wahl_durch_Zustimmung
 
 TODOTODOTODO: comparison to majority judgement, approval voting and bucklin voting (similarities/differences)
 
-##### Closed list voting/Open list voting
-- Used when positions are to be filled by members of the running parties. 
-- Closed list voting: The voters only can vote for the parties. The elected parties have full decision over who of their members get the positions. 
-- Open list voting: Voters have at least some influence on the order in which a party's candidates are elected. (Example: The candidates are the party's members. Each party has a rank of their members. If a party's candidate reaches a certain quota of the votes, he gets the position even if he's not at the top of the party's list.)
-- These systems aren't of any use for our considerations. 
-- https://en.wikipedia.org/wiki/Closed_list; https://en.wikipedia.org/wiki/Open_list; https://en.wikipedia.org/wiki/Party-list_proportional_representation
+##### Instant-runoff voting 
+Used in single-seat elections with more than two candidates 
+Voters rank all of the candidates in their personal order of preference
+The candidate with the fewest first-choice-votes is eliminated. If there is more than one candidate with the fewest first-choice-votes, the second-choice-votes of these candidates are taken into consideration and so on in order to eliminate only one candidate per voting round. 
+In the last voting round there are only two candidates left. The one who gets a majority of first-choice-votes wins the election. 
+Variations: There are a few variations of Instant-runoff voting. For example, a candidate could be considered the winner as soon as he/she has a majority of first-choice-votes even though there are more than two candidates left. 
+
+#### Open list voting
+Voters have at least some influence on the order in which a party's candidates are elected. (Example: The candidates are the party's members. Each party has a rank of their members. If a party's candidate reaches a certain quota of the votes, he gets the position even if he's not at the top of the party's list.) 
+Open list describes a certain family of voting systems for elections in which multiple candidates are elected through allocations to an electoral listing. What this family has in common is that voters have at least some influence on the order in which a party's candidates are elected. 
+In "relatively closed" list systems, a candidate must get a full quota of votes to win a seat. There are various quotas that could be considered for this purpose. 
+In "more open" list systems, that quota is so low that it's possible that more of a party's candidates achieve the quota than the total number of seats won by the party. Therefore it should be constituted in advance whether the party's list ranking or the total number of each candidates' votes takes precedence if this happens.
+In the "most open" list system, the total number of votes each candidate has received utterly determines the election result. 
+In a "free list" system/panachage electors even have more power over which candidates are elected than in the systems above, because each elector is given as many votes as there are seats to be filled and is allowed to cast more than one vote to the very same candidate.
+https://en.wikipedia.org/wiki/Open_list; https://en.wikipedia.org/wiki/Party-list_proportional_representation
+
+##### Bucklin voting/The Grand Junction System: 
+- Usually used to determine a single winner. 
+- Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
+- To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
+- The number of votes each candidate received at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
+https://en.wikipedia.org/wiki/Bucklin_voting 
+https://de.wikipedia.org/wiki/Bucklin-Wahl
+https://www.youtube.com/watch?v=CkIYZsJAvNQ
+
+#### Ranked voting/Ordinal voting systems 
+Ranked voting describes certain voting systems in which voters rank outcomes in a hierarchy on the ordinal scale (ordinal voting systems). 
+
+
+#### cardinal voting systems todo 
 
 https://de.wikipedia.org/wiki/Majority_Judgment
 https://www.electology.org/score-voting
