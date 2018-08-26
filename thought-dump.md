@@ -3,7 +3,7 @@
 ## Terminology and fundamental notions
 1) Basic summary of 
 	* what we want to design.
-	* companies that have something similar
+	* companies that have something similar. 
 	* what's different here
 		a) blockchain consensus
 		b) dApp rankings
@@ -29,11 +29,12 @@ The mathematics of voting and elections: A hands-on approach.
 ###### Why voting dApps isn't voting parties
 The "Handbook of Electoral System Choice" (by Josep M. Colomer, Georgetown University) covers the selection of voting systems, but that treatie is about setling the joicy of political electoral system to determine parties from and for countries. In contrast, highly voted apps benefit from exposure but are not voted into the status of rule makers.
 
+Furthermore, we don't have winners as such, but instead obtain exposure.
 
 
-We also don't have winners as such, but instead obtain exposure.
+###### "Electorama" Wiki 
+This wiki is designed to give "election-minded" people an overview of different electoral systems, because the system chosen for the election has great influence on the election's outcome. 
 
-###### "Electorama" Wiki (todo)
 * Main page
 https://wiki.electorama.com 
 
@@ -41,8 +42,12 @@ https://wiki.electorama.com
 https://wiki.electorama.com/wiki/Special:AllPages
 
 	
-###### "Electorial Knowledge Network" website (todo)
-http://www.aceproject.org/ (todo)
+###### "Electoral Knowledge Network" website (todo)
+This website provides information and customised advice on electoral processes. 
+The "Administration and Cost of Elections" (short: "ACE") - Projects promotes electoral processes the project's team considers credible and transparent. 
+Besides other information, the website contains global statistics and data and an Enyclopaedia of Elections which covers topics in elections management. 
+http://www.aceproject.org/ 
+http://aceproject.org/ace-en
 
 ###### Wikipedia:
 
