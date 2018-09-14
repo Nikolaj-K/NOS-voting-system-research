@@ -1,6 +1,16 @@
+%TODO: specifiy, for which elections (2 candidates etc) the following holds
+
 There are three properties that a voting system should always have in order not to be unfair: 
 Anonymity: A voting system should treat all voters equally. I.e. if any two voters trade ballots, this shouldn't change the election's outcome. \\
-Concerning the dApp-voting-system, this property could be argued, see TODO-Verweis %\ref{label}
+Concerning the dApp-voting-system, this property could be argued. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the plattform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in %\ref{label}
 Neutrality: A voting system should treat all candidates equally. I.e. if every voter switched their vote from one candidate to another, the outcome should change accordingly. 
 Monotonicity: A voting system should be monotone. I.e. it should be impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. 
+The so-called May's Theorem states that majority rule %TODO: see \ref{} 
+is the only voting system that is anonymous, neutral, and monotone, and that avoids the possibilities of ties. 
+%\cite{Handsonapproach} The Mathematics of Voting and Elections: A Hands-On Approach.
+
+
+
+%TODO: May's theorem
+%TODO: Arrow's theorem http://pi.math.cornell.edu/~mec/Summer2008/anema/maystheorem.html
 
