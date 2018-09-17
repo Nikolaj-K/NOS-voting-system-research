@@ -2,7 +2,7 @@
 ## python implementations
 
 https://github.com/warner/python-ecdsa/blob/master/src/ecdsa/ecdsa.py
-
+#this is the best
 https://bitcoin.stackexchange.com/questions/25024/how-do-you-get-a-bitcoin-public-key-from-a-private-key
 
 
