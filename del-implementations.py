@@ -7,7 +7,7 @@ https://bitcoin.stackexchange.com/questions/25024/how-do-you-get-a-bitcoin-publi
 
 
 https://github.com/circulosmeos/bitcoin-in-tiny-pieces
-
+#hvjk s
 https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3
 
 https://www.youtube.com/watch?v=dUJyfz0QQXw
