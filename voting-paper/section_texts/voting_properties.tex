@@ -1,13 +1,17 @@
 %TODO: specifiy, for which elections (2 candidates etc) the following holds
 
-There are three properties that a voting system should always have in order not to be unfair: 
+One way to measure the fairness of a given voting system is to determine some properties that the system should satisfy. 
+Commonly, the three properties that a voting system should fulfill in order to be fair are the following: \\
 Anonymity: A voting system should treat all voters equally. I.e. if any two voters trade ballots, this shouldn't change the election's outcome. \\
-Concerning the dApp-voting-system, this property could be argued. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the plattform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in %\ref{label}
-Neutrality: A voting system should treat all candidates equally. I.e. if every voter switched their vote from one candidate to another, the outcome should change accordingly. 
-Monotonicity: A voting system should be monotone. I.e. it should be impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. 
+Concerning the dApp-voting-system, this property could be argued. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the plattform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in \\%\ref{label} S. 19: Majority rule is the voting system that elects the candidate who receives more than half of the votes, if such a candidate exists. If there is no such candidate, then majority rule results in a tie, with no winner elected. 
+Neutrality: A voting system should treat all candidates equally. I.e. if every voter switched their vote from one candidate to another, the outcome should change accordingly. \\
+Monotonicity: A voting system should be monotone. I.e. it should be impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. \\
 The so-called May's Theorem states that majority rule %TODO: see \ref{} 
-is the only voting system that is anonymous, neutral, and monotone, and that avoids the possibilities of ties. 
-%\cite{Handsonapproach} The Mathematics of Voting and Elections: A Hands-On Approach.
+is the only voting system for two-candidate-elections that is anonymous, neutral, and monotone, and that avoids the possibility of ties. However, majority rule is no option for the dApp-voting-system because there will be more than two candidates and anonymity is no property wanted. \\
+Some generalization of majority rule, which majority rule is a special case of, is plurality method. It is the voting system that elects the cadidate who receives the largest number of votes, even if that numer is less than half of the total numer of votes cast. Plurality method only results in a tie, when two or more candidates receive the same number of votes and more than the number of votes received by any of the other candidates. \\
+Concerning the dApp-voting-system, the possibility of ties is no downside since there's no need to determine a single winner. %S. 19
+
+%\cite{Handsonapproach} The Mathematics of Voting and Elections: A Hands-On Approach. Chapter One
 
 
 
