@@ -3,7 +3,8 @@
 One way to measure the fairness of a given voting system is to determine some properties that the system should satisfy. 
 Commonly, the three properties that a voting system should fulfil in order to be fair are anonymity, neutrality and monotonicity. For two-candidate elections they are defined as follows: \\
 {\bf{Anonymity:}} A voting system is said to be anonymous if it treats all voters equally. I.e. if any two voters trade ballots, this shouldn't change the election's outcome. \\
-Concerning the dApp-voting-system, this property could be argued. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the platform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in \\%\ref{label} S. 19: Majority rule is the voting system that elects the candidate who receives more than half of the votes, if such a candidate exists. If there is no such candidate, then majority rule results in a tie, with no winner elected. 
+Concerning the dApp-voting-system, this property could be argued. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the platform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in \\%\ref{label} 
+%S. 19: Majority rule is the voting system that elects the candidate who receives more than half of the votes, if such a candidate exists. If there is no such candidate, then majority rule results in a tie, with no winner elected. 
 {\bf{Neutrality:}} A voting system is said to be neutral if it treats all candidates equally. I.e. if every voter switched their vote from one candidate to another, the outcome should change accordingly. \\
 Monotonicity: A voting system is said to be monotone if it is impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. \\
 The so-called May's Theorem states that majority rule %TODO: see \ref{} 
@@ -27,8 +28,21 @@ Taking account of personal and societal preference orders, for elections with mo
 Anonymity: A voting system is said to be anonymous if it treats all voters equally. I.e. if any two voters traded their personal preference orders, the outcome of the resulting societal preference order should not change. \\
 As mentioned before, this is no property we want the dApp-voting-system to fulfil, see \\ %\ref{}. 
 Neutrality: A voting system is said to be neutral if it treats all candidates equally. I.e. if every voter switched the positions of two specific candidates on their personal preference orders, the positions of these two candidates in the resulting societal preference order would be switched accordingly. \\
-Monotonicity: A voting system is said to be monotone if it is impossible for a candidate to go from winning to losing or to experience a decrease in rank on the resulting societal preference order whenever changes in favour of that candidate, but no changes in disadvantage of that candidate, occur on individual preference ballots. 
+Monotonicity: A voting system is said to be monotone if it is impossible for a candidate to go from winning to losing or to experience a decrease in rank on the resulting societal preference order whenever changes in favour of that candidate, but no changes in disadvantage of that candidate, occur on individual preference ballots. \\
 %großes Buch wo alles drinsteht, Chapter Two
+Some properties one obviously would want a voting system to fulfill are the following: \\
+\begin{enumerate}
+\item A candidate who would defeat every other candidate in a head-to-head election (under majority rule) is called a Condorcet winner. 
+\item If a candidate would lose to every other candidate in a head-to-head contest (under majority rule) is called a Condorcet loser. 
+\item A voting system is said to satisfy the Condorcet winner criterion (CWC), if it always elects the Condorcet winner whenever one exists.
+\item A voting system is said to satisfy the Condorcet loser criterion (CLC), if it always elects the Condorcet loser whenever one exists. 
+Since the definition of a Condorcet winner involves two-candidate-elections, for a voting system with more than two candidates it is a bit tricky to design it in a way that it fulfills the Condorcet criterion. \\
+But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfill them. The so-called sequential pairwise voting, which is explained in the following lines, does. And as you will see later, the voting system we propose for the dApp-voting-store, which is some kind of mutation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
+Sequential pairwise voting: \\
+To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, 
+%TODO: difference between Borda count and sequential pairwise voting herausarbeiten
+
+
 
 
 
