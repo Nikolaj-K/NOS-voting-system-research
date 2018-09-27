@@ -1,33 +1,27 @@
-\documentclass[12pt, a4paper, twoside, titlepage]{article}
-% font size could be 10pt (default), 11pt or 12 pt
-% paper size coulde be letterpaper (default), legalpaper, executivepaper,
-% a4paper, a5paper or b5paper
-% side coulde be oneside (default) or twoside 
-% columns coulde be onecolumn (default) or twocolumn
-% graphics coulde be final (default) or draft 
-%
-% titlepage coulde be notitlepage (default) or titlepage which makes an extra page for title 
-% paper alignment coulde be portrait (default) or landscape 
-% equations coulde be 
-%   default number of the equation on the rigth and equation centered 
-%   leqno number on the left and equation centered 
-%   fleqn number on the rigth and  equation on the left side
-%	
+\input{overhead/formatting.tex}
+\input{overhead/usepackages.tex}
+
 %\title{A not so small \LaTeX{} Article Template\thanks{To your mother}}
 %\author{Your Name  \\ Your Company / University  \\ \and  The Other Dude \\ His Company / University \\ }
 %\date{25.12.00} or be a certain date
 %\date{ } or there is no date 
 \date{\today} 
 
-\begin{document} %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% 
+\begin{document} %%%%%%%%%%
 
 %\maketitle %% needs `\title` being uncommented
-\tableofcontents
+
+\tableofcontents \newpage
 
 \part{Ranking system for a dApp store}
+(This part ought to be included in a document with several parts.) %% Todo: Remove this once the other parts are included.
 
-\input{section_texts/test_import.tex} 
-\input{section_texts/voting_properties.tex} 
-\input{section_texts/latex_reference_stuff.tex} 
+\input{section_texts/s20_motivation.tex} \newpage
+\input{section_texts/s50_comparison.tex}  \newpage
+\input{section_texts/s70_science.tex}  \newpage
+\input{section_texts/s75_voting_properties.tex} \newpage
+\input{section_texts/s80_economic.tex} \newpage
+\input{section_texts/s88_thought-dump.md} \newpage
+\input{section_texts/s90_algorihm.tex}  \newpage
 
-\end{document} %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% 
+\end{document} %%%%%%%%%%

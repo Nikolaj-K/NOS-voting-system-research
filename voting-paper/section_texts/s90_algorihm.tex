@@ -1,0 +1,60 @@
+
+\section{Propose an algorithm}
+
+{\color{red}{
+TODO: explain the below in detail and put it in context
+}}
+
+\begin{lstlisting}[language=Python]
+
+rankings = {
+    'Alice': 
+    {
+        'B+': ['cherry', 'orange'], 
+        'D': ['banana', 'apple', 'kiwi']
+    },
+    
+    'Bob': 
+    {
+        'B+': ['orange'], 
+        'D+': ['kiwi', 'pear'], 
+        'D': ['apple', 'banana']
+    },
+    
+    'Carl': {
+        'A+': ['pear', 'apple'], 
+        'A': ['cherry'], 
+        'C+': ['peach'], 
+        'C': ['orange', 'kiwi'], 
+        'F': ['banana']
+    }
+}
+    
+## collect data
+grade_bases = to_rating_dict(GRADES)
+
+fruit_user_ratings = {fruit: {} for fruit in FRUITS}
+user_fruit_ratings = {user : {} for user  in USERS }
+
+for user in USERS:
+    print('\nuser: {} '.format(user) + 40*'-')
+    user_ranking = rankings[user]
+    for grade in GRADES:
+        if grade in user_ranking.keys():
+            gb = grade_bases[grade]
+            l = user_ranking[grade]
+            r = to_rating_dict(l)
+            for fruit, step_rating in r.items():
+                fr = gb-(1-step_rating)/len(GRADES)
+                fruit_user_ratings[fruit][user] = fr
+                user_fruit_ratings[user][fruit] = fr
+
+## compute bracketed means
+fruit_user_ratings_means = {fruit: mean(rating_dict.values()) for fruit, rating_dict in fruit_user_ratings.items()}
+fruit_user_ratings_means_sorted = sorted(fruit_user_ratings_means.items(), key=operator.itemgetter(1))
+
+\end{lstlisting}
+
+{\color{red}{
+TODO: make the above code prettier
+}}
