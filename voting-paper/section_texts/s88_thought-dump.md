@@ -2,8 +2,10 @@
 TODO: take the content from the thought-dump (pasted also below) and translate it into bunch of sections
 }}
 
+\section{{\color{blue}{temporary thought-dump.md section}}}
+
 {\color{blue}{
-\section{temporary thought-dump.md section}
+
 \begin{verbatim}[fontsize=\small]
 
 # "Voting Paper" section Abstract (notes, comments upfront)
@@ -486,4 +488,5 @@ tldr we need
 	* The result must definately be on-chain, and if the write-back to the user accounts is doable that would be great as well
 
 \end{verbatim}
-}
+
+}}%% end color
