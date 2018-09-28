@@ -45,7 +45,7 @@ Since the definition of a Condorcet winner involves two-candidate-elections, for
 %Sequential pairwise voting: \\
 %To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, the voters have to choose between the winner of the preceding contest and the next candidate. Then they have to choose between the winner of the latter contest and the next candidate and so on, whereby the winner always is decided according to majority rule. Finally, the winner from the last two-candidate-contest is declared the winner of the whole election. \\
 % Though sequential pairwise voting has the benefit of always electing a Condorcet winner if one exists, it comes with great downsides. First of all, it would produce a societal preference order that doesn't have the mathematical property of transitivity and therefore would not be sensible. Furthermore, in sequential pairwise voting, an order in which new candidates are to be introduced into the head-to-head comparisons has to be specified beforehand. In elections where no Condorcet winner exists, exactly this order, called agenda, has an enormous influence on who wins the election. In other words, if there is no Condorcet winner, this system is highly manipulable and violates the fundamental property of neutrality, which is why sequential pairwise voting clearly can't be said to be a fair method. \\
-Another criterion that can be considered related to the assessment of the utility and sensibility of a voting system is the so-called "independence of irrelevant alternatives criterion", defined as follows: \\
+Another criterion that can be considered related to the assessment of the utility and sensibility of a voting system is the so-called "Independence of Irrelevant Alternatives" - criterion, defined as follows: \\
 A voting system is said to satisfy the irrelevant alternatives criterion (IIA) if the societal preference between any two candidates is only dependent on the individual voters' preferences between those two candidates (and not affected by the candidacy of any other candidate). \\
 However, none of the voting systems discussed so far satisfies this criterion. \\
 In 1951, Kenneth arrow in the context of his Ph.D.-thesis published the commonly called "Arrow's impossibility theorem" which states that no voting system exists that has the five desired qualities mentioned above. In 1972, this discovery even earned him the Nobel Prize in economic science. Various versions of the theorem exist, but what it states, more precisely, is the following: \\
@@ -53,8 +53,12 @@ You can consider a voting system to be a rule that assigns to each possible coll
 we define it as a function that takes as input a collection of transitive preference orders of all the voters and produces as output a transitive societal preference order that represents the will of the electorate. \\
 This definition doesn't rule out the possibility of ties, neither ties in individual preference ballots nor ties in the resulting societal preference orders. So if one defines the societal preference order of pairwise sequential voting as the winner followed by a tie of all the other candidates, even pairwise sequential voting fits in with the that defintion of a voting system. \\
 The mathematical conditions Arrow had in mind can be interpreted as follows: 
-\begin{enumerate}
-\item Voting systems should place no restrictions apart from transitivity on how voters can rank the candidates in an election. There should be no kind of dictatorship presetting that only specific preference orders are acceptable or are not. Every possible collection of transitive preference ballots must yield a transitive societal preference order. 
+\begin{enumerate} % from the voting book, page 68; andere Kriterien auf Wikipedia: https://en.wikipedia.org/wiki/Kenneth_Arrow, https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem, https://plato.stanford.edu/entries/arrows-theorem/, 
+%TODO: Arrow's theorem http://pi.math.cornell.edu/~mec/Summer2008/anema/maystheorem.html
+\item Universality: Voting systems should place no restrictions apart from transitivity on how voters can rank the candidates in an election. There should be no kind of dictatorship presetting that only specific preference orders are acceptable or are not. Every possible collection of transitive preference ballots must yield a transitive societal preference order. \\
+\item Positive Association of Social and Individual Values: Voting systems should satisfy the Indipendence of Irrelevant Alternatives - criterion. \\
+\item Citizen Sovereignty: Voting systems should not be imposed in any way. I.e., there should never be a pair of candidates in an election such that one of these candidates is preferred over or tied with the other in the resulting societal preference order in defiance of any vote. \\
+\item Nondictatorship: Voting systems should not be dictatorial. I.e., there should never be a voter such that, for any pair of candidates, if that voter prefers one of the candidates over the other, then society will also have the same preference order regarding these two candidates. 
 
 % maybe add instant runoff (p 48-50) though it violates monotonicity and CWC
 % TODO: majority criterion ergänzen
@@ -67,7 +71,7 @@ The mathematical conditions Arrow had in mind can be interpreted as follows:
 
 
 %TODO: May's theorem
-%TODO: Arrow's theorem http://pi.math.cornell.edu/~mec/Summer2008/anema/maystheorem.html
+
 
 
 
