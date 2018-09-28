@@ -1,10 +1,8 @@
 ### NOS-voting-system-research
 
-#### thought-dump.md
+#### voting-paper
 
-Some summaries and some arguments we want to keep track of for the paper. For the latter, see 
-[voting-paper](https://github.com/Nikolaj-K/NOS-voting-system-research/tree/master/voting-paper) 
-folder.
+Review of voting systems for the context of a ranking tool using a decrentralized ledger.
 
 #### pseudo-codes.py
 
