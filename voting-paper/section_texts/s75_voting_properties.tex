@@ -40,11 +40,11 @@ Some properties one obviously would want a voting system to fulfill are the foll
 \item A voting system is said to satisfy the Condorcet winner criterion (CWC), if it always elects the Condorcet winner whenever one exists.
 \item A voting system is said to satisfy the Condorcet loser criterion (CLC), if it always elects the Condorcet loser whenever one exists. 
 \end{enumerate}
-Since the definition of a Condorcet winner involves two-candidate-elections, for a voting system with more than two candidates it is a bit tricky to design it in a way that it fulfills the Condorcet criterion. \\
-But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfill them. The so-called sequential pairwise voting, which is explained in the following lines, does. And as you will see later, the voting system we propose for the dApp-voting-store, which is some kind of mutation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
-Sequential pairwise voting: \\
-To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, 
-%TODO: difference between Borda count and sequential pairwise voting herausarbeiten
+Since the definition of a Condorcet winner involves two-candidate-elections, for a voting system with more than two candidates it is a bit tricky to design it in a way that it fulfills the Condorcet criterion. The Borda count, for example, doesn't fulfill the criterion since it violates majority rule. \\
+%But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfill them. The so-called sequential pairwise voting, which is explained in the following lines, does. And as you will see later, the voting system we propose for the dApp-voting-store, which is some kind of mutation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
+%Sequential pairwise voting: \\
+%To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, the voters have to choose between the winner of the preceding contest and the next candidate. Then they have to choose between the winner of the latter contest and the next candidate and so on, whereby the winner always is decided according to majority rule. Finally, the winner from the last two-candidate-contest is declared the winner of the whole election. \\
+%Though sequential pairwise voting has the benefit of always electing a Condorcet winner if one exists, it comes with great downsides. First of all, it doesn't easily produce a sensible preference order. Furthermore, in sequential pairwise voting, an order in which new candidates are to be introduced into the head-to-head comparisons has to be specified beforehand. And exactly this order, called agenda, has an enormous influence on who wins the election. In other words, it is highly manipulable and violates the fundamental property of neutrality, which is why sequential pairwise voting clearly can't be said to be a fair method. 
 
 
 
