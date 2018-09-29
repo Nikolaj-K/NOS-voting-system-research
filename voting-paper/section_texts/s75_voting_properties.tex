@@ -15,7 +15,7 @@ In this section we recall the basic established definitions and properties and t
 
 \subsection{On existing voting systems}
 
-%TODO: specifiy, for which elections (2 candidates etc) the following holds
+%TODO: specify, for which elections (2 candidates etc) the following holds
 
 One way to measure the fairness of a given voting system is to determine some properties that the system should satisfy. 
 Commonly, the three properties that a voting system should fulfil in order to be fair are anonymity, neutrality and monotonicity. For two-candidate elections they are defined as follows: \\
@@ -39,7 +39,7 @@ Some voting system that does not fulfil the majority criterion, is the so-called
 Firstly, each voter submits a ballot that contains his or her individual preference order of all the candidates. \\
 Then points are awarded to each candidate for each ballot cast, according to the following rule: \\
 A $m$-place ranking is worth $n-m$ points (where $1\leq m \leq n$). In other words, a first-place ranking is worth $n-1$ points, a second-place ranking is worth $n-2$ points and so on. 
-Finally the candidate whose total number of points from all of the ballots is the largest is declared the winner and the corresponding societal preference order is determined by the number of points each candidate has got from largest to smallest. If there is more than one candidate with the largest number of points, a tie occurs. Also some sort of tie occurs in the societal preference order whenever candidates receive the same number of total points. They then occupy consecutive indistinguiable positions in the preference order. \\
+Finally the candidate whose total number of points from all of the ballots is the largest is declared the winner and the corresponding societal preference order is determined by the number of points each candidate has got from largest to smallest. If there is more than one candidate with the largest number of points, a tie occurs. Also some sort of tie occurs in the societal preference order whenever candidates receive the same number of total points. They then occupy consecutive indistinguishable positions in the preference order. \\
 Intuitively, Borda count also seems to be quite fair. However, it violates the majority criterion. For the purpose of the dApp-voting-system we consider using some sort of variation of the Borda count more appropriate than sticking to majority criterion. Imagine an extreme situation where a small majority of voters (i.e. users) ranks a specific dApp first place but all of the other voters rank it last on their personal preference. Obviously it would make no sense to declare this dApp the winner and rank it first in a societal preference order. Determining it's rank according to the Borda count seems much more legitimate. So the dApp-voting-system will not fulfil the majority criterion and will not use the plurality method, but rather use some sort of Borda count in order to lead to a sensible societal preference order. \\
 Taking account of personal and societal preference orders, for elections with more than two candidates, the three properties of fair voting systems have to be redefined: \\
 Anonymity: A voting system is said to be anonymous if it treats all voters equally. I.e. if any two voters traded their personal preference orders, the outcome of the resulting societal preference order should not change. \\
@@ -47,15 +47,15 @@ As mentioned before, this is no property we want the dApp-voting-system to fulfi
 Neutrality: A voting system is said to be neutral if it treats all candidates equally. I.e. if every voter switched the positions of two specific candidates on their personal preference orders, the positions of these two candidates in the resulting societal preference order would be switched accordingly. \\
 Monotonicity: A voting system is said to be monotone if it is impossible for a candidate to go from winning to losing or to experience a decrease in rank on the resulting societal preference order whenever changes in favour of that candidate, but no changes in disadvantage of that candidate, occur on individual preference ballots. \\
 %großes Buch wo alles drinsteht, Chapter Two
-Some properties one obviously would want a voting system to fulfill are the following: \\
+Some properties one obviously would want a voting system to fulfil are the following: \\
 \begin{enumerate}
 \item A candidate who would defeat every other candidate in a head-to-head election (under majority rule) is called a Condorcet winner. 
 \item If a candidate would lose to every other candidate in a head-to-head contest (under majority rule) is called a Condorcet loser. 
 \item A voting system is said to satisfy the Condorcet winner criterion (CWC), if it always elects the Condorcet winner whenever one exists.
 \item A voting system is said to satisfy the Condorcet loser criterion (CLC), if it always elects the Condorcet loser whenever one exists. 
 \end{enumerate}
-Since the definition of a Condorcet winner involves two-candidate-elections, for a voting system with more than two candidates it is a bit tricky to design it in a way that it fulfills the Condorcet criterion. The Borda count, for example, doesn't fulfill the criterion since it violates majority rule. \\
-%But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfill them. The so-called sequential pairwise voting, which is explained in the following lines, does. And as you will see later, the voting system we propose for the dApp-voting-store, which is some kind of mutation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
+Since the definition of a Condorcet winner involves two-candidate-elections, for a voting system with more than two candidates it is a bit tricky to design it in a way that it fulfils the Condorcet criterion. The Borda count, for example, doesn't fulfil the criterion since it violates majority rule. \\
+%But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfil them. The so-called sequential pairwise voting, which is explained in the following lines, does. And as you will see later, the voting system we propose for the dApp-voting-store, which is some kind of mutation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
 %Sequential pairwise voting: \\
 %To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, the voters have to choose between the winner of the preceding contest and the next candidate. Then they have to choose between the winner of the latter contest and the next candidate and so on, whereby the winner always is decided according to majority rule. Finally, the winner from the last two-candidate-contest is declared the winner of the whole election. \\
 % Though sequential pairwise voting has the benefit of always electing a Condorcet winner if one exists, it comes with great downsides. First of all, it would produce a societal preference order that doesn't have the mathematical property of transitivity and therefore would not be sensible. Furthermore, in sequential pairwise voting, an order in which new candidates are to be introduced into the head-to-head comparisons has to be specified beforehand. In elections where no Condorcet winner exists, exactly this order, called agenda, has an enormous influence on who wins the election. In other words, if there is no Condorcet winner, this system is highly manipulable and violates the fundamental property of neutrality, which is why sequential pairwise voting clearly can't be said to be a fair method. \\
@@ -71,7 +71,7 @@ The mathematical conditions Arrow had in mind can be interpreted as follows:
 %TODO: Arrow's theorem http://pi.math.cornell.edu/~mec/Summer2008/anema/maystheorem.html
 \item Universality: Voting systems should place no restrictions apart from transitivity on how voters can rank the candidates in an election. There should be no kind of dictatorship presetting that only specific preference orders are acceptable or are not. Every possible collection of transitive preference ballots must yield a transitive societal preference order. 
 \item Positive Association of Social and Individual Values: Voting systems should be monotone. 
-\item Independence of Irrelevant Alternatives: Voting systems should satisfy the Indipendence of Irrelevant Alternatives - criterion. 
+\item Independence of Irrelevant Alternatives: Voting systems should satisfy the Nondictatorship of Irrelevant Alternatives - criterion. 
 \item Citizen Sovereignty: Voting systems should not be imposed in any way. I.e., there should never be a pair of candidates in an election such that one of these candidates is preferred over or tied with the other in the resulting societal preference order in defiance of any vote. 
 \item Nondictatorship: Voting systems should not be dictatorial. I.e., there should never be a voter such that, for any pair of candidates, if that voter prefers one of the candidates over the other, then society will also have the same preference order regarding these two candidates. 
 \end{enumerate}
@@ -80,42 +80,35 @@ The mathematical conditions Arrow had in mind can be interpreted as follows:
 
 %https://en.wikipedia.org/wiki/Social_Choice_and_Individual_Values
 
-
-
-
-
-
 %TODO: May's theorem
 
 
-
+%%@Alex
+%%
+%% plz don't use German in this text (also comments). 
+%%It is harder to read for outsiders and also a problem when you want to to grammar correction.
+%%
+%% And I propose to do line breaks after sentences to make the diff be easier to read.
+%% (At the very latest after the dot, possibly every 80 chars, even.)
+%% If you do a line break without \\, it will be ignored in the formatted text anyway.
 
 
 
 
 {\color{blue}{
 \begin{verbatim}
-## Overview
-
-### Properties of voting systems
-
 ##### Voting system criteria
 
-
 https://wiki.electorama.com/wiki/Category:Voting_system_criteria
-	
-
+%%TODO: 
+%% move wikipedia links to references
 
 
 ###### Features for classifications of voting systems
-
 * Plurality voting
 * Instant-runoff voting
 
-
-
 ### Popular voting systems
-
 ##### First-past-the-post voting/Winner takes it all
 - Voters indicate on a ballot the candidate of their choice, and the candidate who receives the most votes wins. 
 - If there are at least two positions two be filled, each voter casts (up to) the same number of votes as there are positions to be filled, and those elected are the highest-placed candidates corresponding to that number of positions. 
@@ -133,10 +126,9 @@ https://en.wikipedia.org/wiki/Majority_judgment
 - Usually used to determine a single winner. 
 - Each voter may select any number of candidates. The winner is the candidate who is selected ("approved") most often. 
 - Variation: each voter may only select a predetermined number of candidates, otherwise this person's cast votes are invalid. 
-- The algorithm we propose also allows each candidate to evaluate an arbitrary numer of candidates, but it is far from being some sort of approval voting. 
+- The algorithm we propose also allows each candidate to evaluate an arbitrary number of candidates, but it is far from being some sort of approval voting. 
 https://www.electology.org/approval-voting
 https://de.wikipedia.org/wiki/Wahl_durch_Zustimmung
-
 
 ##### Closed list voting
 - Used when positions are to be filled by members of the running parties. 
@@ -146,11 +138,8 @@ In praxis, the order in which a party's list candidates get elected can also be 
 - These systems aren't of any use for our considerations. 
 - https://en.wikipedia.org/wiki/Closed_list; https://en.wikipedia.org/wiki/Party-list_proportional_representation
 
-
-
-
 #### Preferential voting/Preference voting: 
-May refer to different election systems or groups of election systems. Some authors consider preferentiality to be one of the characteristics by which electoral systems can be evaluated and classified. 
+May refer to different election systems or groups of election systems. Some authors consider preferentially to be one of the characteristics by which electoral systems can be evaluated and classified. 
 Preferential voting may, for example, refer to ranked voting methods/ordinal voting systems, i.e. all election methods that involve ranking candidates in order of preference in a hierarchy on the ordinal scale, the most important ones being instant-runoff voting, single transferable vote and the Borda count. 
 instant-runoff voting
 range voting/score voting
@@ -162,7 +151,8 @@ bucklin voting
 - Voters rate candidates on a scale. The candidate with the highest rating wins.  
 - Variations of score voting can use a score-style ballot to elect multiple candidates simultaneously.
 
-TODOTODOTODO: comparison to majority judgement, approval voting and bucklin voting (similarities/differences)
+%%TODOTODOTODO: 
+%%comparison to majority judgement, approval voting and bucklin voting (similarities/differences)
 
 ##### Instant-runoff voting 
 Used in single-seat elections with more than two candidates 
@@ -183,8 +173,8 @@ https://en.wikipedia.org/wiki/Open_list; https://en.wikipedia.org/wiki/Party-lis
 
 ##### Bucklin voting/The Grand Junction System: 
 - Usually used to determine a single winner. 
-- Each voter ranks the candidates in ascending order, the first one being the favorite and the last one being the worst candidate. 
-- To evaluate the votings, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
+- Each voter ranks the candidates in ascending order, the first one being the favourite and the last one being the worst candidate. 
+- To evaluate the voting's, at first the prime rank is considered. Each candidate gains a score as high as the number of voters that ranked him first. If a candidate's total votes reach a majority (i.e. more than half of the number of voters), this candidate is the winner of the election. If not, the second rank is taken into consideration. 
 - The number of votes each candidate received at the second rank is added to the number of votes from the first rank. If a candidates number of votes reaches the majority (i.e. more than half of the number of voters), this candidate wins the election. Otherwise the procedure continues until a candidate with a majority vote is found. The winner then is the candidate with the most votes accumulated.
 https://en.wikipedia.org/wiki/Bucklin_voting 
 https://de.wikipedia.org/wiki/Bucklin-Wahl
@@ -194,20 +184,24 @@ https://www.youtube.com/watch?v=CkIYZsJAvNQ
 Ranked voting describes certain voting systems in which voters rank outcomes in a hierarchy on the ordinal scale (ordinal voting systems). 
 
 
-#### cardinal voting systems todo 
+#### cardinal voting systems
 
+
+\end{verbatim}
+}}%% end color
+
+ 
+{\color{green}{\begin{verbatim}
 https://de.wikipedia.org/wiki/Majority_Judgment
 https://www.electology.org/score-voting
 https://en.wikipedia.org/wiki/Score_voting 
-
-
 
 https://en.wikipedia.org/wiki/Instant-runoff_voting (todo)
 https://en.wikipedia.org/wiki/Open_list
 https://en.wikipedia.org/wiki/Preferential_voting (todo)
 
 https://en.wikipedia.org/wiki/Ranked_voting (todo)
-
-\end{verbatim}
-}}%% end color
+%%TODO: 
+%% move wikipedia links to references
+\end{verbatim}}}%% end color
 
