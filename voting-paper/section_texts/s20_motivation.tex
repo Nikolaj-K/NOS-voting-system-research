@@ -1,13 +1,17 @@
 
-\section{Decentralized ranking systems in context}
-\subsection{Motivation} 
+\section{Introduction and review of existing platforms}
+\subsection{Motivation}
 In this paper, we advance the discussion of voting systems on distributed ledgers such as blockchains. The core benefit of such frameworks is  that vote-casting and voting-result-computation is perfectly transparent and thus always audible.
-More concretely, we will not study the consensus protocols enabling the decentralized voting system themselves, but instead review and propose\\
+More concretely, we will not study the consensus protocols enabling the decentralised voting system themselves, but instead review and propose\\
 $\bullet$ algorithms for poll evaluations resulting in a sorted list\\
 $\bullet$ innovations made possible through the underlying audible framework.
 
-The former can manifest as a mechanism for the evaluation of opinions invoked by the voters, which, taken together, result in an average ranking. One of our main motivations here is the design of a voting system for a dApps store. So while the subject of the poll algorithms discussed may be anything from politicians to fruits, we will consider the rating of software applications. The vote casting actors will thus be referred to as `users` and correspond to whitelisted addresses on the decentralized ledger. The whitelisting itself doesn't need to be the result of a decentralized process. 
+The former can manifest as a mechanism for the evaluation of opinions invoked by the voters, which, taken together, result in an average ranking. 
+One of our main motivations here is the design of a voting system for a dApps store. So while the subject of the poll algorithms discussed may be anything from politicians to fruits, we will consider the rating of software applications. 
+The vote casting actors will thus be referred to as `users` and correspond to whitelisted addresses on the decentralised ledger. 
+The whitelisting itself doesn't need to be the result of a decentralised process. 
 
-In this context, the most notable innovation that comes with audible polling is the verifiable claim for rewards based on ``on-chain`` actions. For each poll or voting round, the final result can be put in context with the individual user's vote and thus used to compute a transparent reward claim tied to the user address.
+In this context, the most notable innovation that comes with audible polling is the notion verifiable claims for rewards based on ``on-chain`` actions. 
+For each poll or voting round, the final result can be put in context with the individual user's vote and thus used to compute a transparent reward claim tied to the user address. 
 
-{\color{red}{TODO: Note on exposure/money as reward}}
+A notion of reward can be realised in various forms, such as cryptocurrencies, coupons, powers or rights on the platform exposure for promotion.
