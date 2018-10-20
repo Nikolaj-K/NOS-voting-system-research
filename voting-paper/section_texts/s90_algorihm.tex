@@ -2,18 +2,17 @@
 \section{Algorithms}
 
 \subsection{Bounding conditions}
+
 {\color{blue}{
+
+\begin{enumerate}
+	\item Reward for both quality and quantity, and both should be necessary
+	\item Reward for writing reviewers, judged on quality
+\end{enumerate}
+
+\subsection{Staking aspects}
+
 \begin{verbatim}
-### dApp-producer ranking Algorithm details
-Reward for both quality and quantity, and both should be necessary
-
-### Reviews
-* Reward for writing reviers, judged on quality
-
-### Rewards
-
-(note: The python file now contains a more elaborate variant of those ideas)
-
 S(n) ... stake of user n 
 V(n) ... "how well" they voted
 N=sum over n such that n voted right (that will be rewards) ... all users
@@ -22,27 +21,44 @@ x ... fraction of non-stakedependent rewards
 R(n) = (x * M) * f(v) + ((1-x) * M) g(n,S(n)) 
 	where f(v) says how good they voted, sum over f(v) is 1
 	and where g(n,s) depends on the stake  where n-sum over g(n,s) is 1
-	
-### On-chain requirements
-
-todo: Write a summary of requirements when it comes to storage and script execution
-
-tldr we need 
-	* User accounts with a tine by of on-chain data relating to past actons and current users rankings
-	* Readout of users ranking, computation of some numbers
-	* The result must definately be on-chain, and if the write-back to the user accounts is doable that would be great as well
-
 \end{verbatim}
+
 }}%% end color
-
-
 
 \subsection{Examples}
 {\color{red}{
-TODO: explain the below in detail and put it in context
+TODO: explain the below in detail and put it in context\\
+TODO: make it prettier
 }}
 
 \begin{lstlisting}[language=Python]
+
+import operator
+import math
+
+VARIANCE_HALF = 0.01
+
+## utility functions
+def to_rating_dict(L): 
+    return {key: float(len(L)-i)/len(L) for i, key in enumerate(L)}
+
+def is_in_interval(x, a, b): 
+    return a<x and x<=b
+
+def mean(L): 
+    return sum(L) / float(len(L))
+
+def variance(L): 
+    L2 = map(lambda x: x*x, L)
+    return mean(L2)
+
+def model(v): 
+    return 1 / (1 + v / VARIANCE_HALF)
+
+## example ranking data (of fruits)
+FRUITS = {'apple', 'peach', 'banana', 'cherry', 'orange', 'pear', 'kiwi'}
+GRADES = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'E+', 'E', 'F']
+USERS = {'Alice', 'Bob', 'Carl'}
 
 rankings = {
     'Alice': 
@@ -90,8 +106,42 @@ for user in USERS:
 fruit_user_ratings_means = {fruit: mean(rating_dict.values()) for fruit, rating_dict in fruit_user_ratings.items()}
 fruit_user_ratings_means_sorted = sorted(fruit_user_ratings_means.items(), key=operator.itemgetter(1))
 
+## voting "game"                 
+diff_abs = {u: {} for u in USERS}
+
+for user in USERS:
+    for fruit in FRUITS:
+        if fruit in user_fruit_ratings[user].keys():
+            diff_abs[user][fruit] = abs(fruit_user_ratings_means[fruit]-user_fruit_ratings[user][fruit])
+
+user_absch = {u: model(variance(udiffs.values())) for u, udiffs in diff_abs.items()}
+user_absch_normed = {u: v / sum(user_absch.values()) for u, v in user_absch.items()}
+
+print(user_absch_normed)
+
+### compute coarse ratings for fruits
+for f, r in fruit_user_ratings_means.items():
+    for i in range(len(GRADES)):
+        i_grade = GRADES[i]
+        b = grade_bases[i_grade]
+        a = grade_bases[GRADES[i+1]] if i<len(GRADES)-1 else 0
+        if is_in_interval(r, a, b):
+            print('{} is ranked {}'.format(f, grade_i))
+
 \end{lstlisting}
 
-{\color{red}{
-TODO: make the above code prettier
-}}
+\subsection{Implementation considerations in the age of dApps}
+
+{\color{blue}{
+
+\subsubsection{On-chain requirements}
+\begin{enumerate}
+	\item User accounts with a tine by of on-chain data relating to past actions and current users rankings
+	\item Readout of users ranking, computation of some numbers
+	\item The result must definitely be on-chain, and if the write-back to the user accounts is doable that would be great as well
+	\item TODO: Storage requirements/considerations for the rating system implementation
+\end{enumerate}
+
+\subsection{Reward for storage discussions/algorithms}
+
+}}%% end color
