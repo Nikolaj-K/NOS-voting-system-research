@@ -4,6 +4,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{hyperref}
+\bibliography{biblio}
 
 
 \title{A bulky academically written paper\\ for a part in a technical whitepaper} %\thanks{To your mother, in the footnotes}
@@ -26,6 +27,23 @@
 \input{section_texts/s80_economic.tex} \newpage
 \input{section_texts/s90_algorihm.tex}  
 
-%%TODO: add bibtext
+%for testing: TODO delete
+\cite{voting}
+\cite{voting2}
+\cite{voting3}
+\cite{voting4}
+\cite{picture}
+\cite{video}
+
+\defbibfilter{literature}{type=book or type=article or type=unpublished or type=inproceedings}
+\printbibliography[filter=literature]
+
+\defbibfilter{others}{keyword={Newspaper} or keyword={Vid}}
+\printbibliography[heading=subbibliography, filter={others}, title={Further Resources}]
+
+\printbibliography[heading=subbibliography, keyword=Bild, title={Picture Resources}]
+
+\nocite{Picture2}
+%\printbibliography
 
 \end{document} %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%%
