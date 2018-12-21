@@ -1,9 +1,8 @@
 
 \section{On voting}
-We want to tap into the rich pool of established knowledge on voting voting systems, to inform our options and guide our decisions in designing suitable algorithms. 
+We want to tap into the rich pool of established knowledge on  voting systems, to inform our options and guide our decisions in designing suitable algorithms. 
 
 \subsection{On existing voting systems}
-
 %TODO: specify, for which elections (2 candidates etc) the following holds
 In this section we recall the basic established definitions and then reflect upon our needs.
 Commonly, the three properties that a voting system should fulfil in order to be fair are anonymity, neutrality and monotonicity. For the elections of one of two possible candidates, these properties are formalised as follows: \\
@@ -20,7 +19,8 @@ This point is not about the voters. For dApp rating, the neutrality property is 
 $\bullet$ {\emph{Monotonicity}}: A voting system is said to be monotone if it is impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. \\
 
 The so-called May's Theorem states that majority rule %TODO: see \ref{} 
-is the only voting system for two-candidate-elections that is anonymous, neutral, and monotone, and that avoids the possibility of ties. However, majority rule is no option for the dApp-voting-system because there will be more than two candidates and anonymity is likely an undesired feature. \\
+is the only voting system for two-candidate-elections that is anonymous, neutral, and monotone, and that avoids the possibility of ties. For more than two candidates this is not true, since it is not guarantueed that one of the candidates is voted for by more than half of all voters. Since in the dApp-voting-system there will be more than two candidates, majority rule wouldn't fulfill %TODO and anonymity is likely an undesired feature. \\ 
+For more than two 
 
 %\cite{Handsonapproach} The Mathematics of Voting and Elections: A Hands-On Approach. Chapter One; maybe TODO: quota systems
 
