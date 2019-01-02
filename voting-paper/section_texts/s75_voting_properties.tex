@@ -1,55 +1,74 @@
 
 \section{On voting}
-We want to tap into the rich pool of established knowledge on  voting systems, to inform our options and guide our decisions in designing suitable algorithms. 
+We want to tap into the rich pool of established knowledge on  voting systems, to inform about our options and guide our decisions in designing suitable algorithms. 
 
 \subsection{On existing voting systems}
 %TODO: specify, for which elections (2 candidates etc) the following holds
-In this section we recall the basic established definitions and then reflect upon our needs.
-Commonly, the three properties that a voting system should fulfil in order to be fair are anonymity, neutrality and monotonicity. For the elections of one of two possible candidates, these properties are formalised as follows: \\
+In this section we recall the basic established definitions and then reflect upon our needs. For the dApp-voting system, the term \textit{voters} does refer to the users of the dApp-store and \textit{candidates} does refer to the dApps available there. \\ 
 
-$\bullet$ {\emph{Anonymity}\footnote{This notion of anonymity is unrelated to the anonymity of a user using an app.}}:
-A voting system is said to be anonymous if it treats all voters equally. In other words, if any two voters trade ballots, this shouldn't change the election's outcome. \\
-Concerning a dApp-voting-system, it is up for discussion in what form a property akin to this should be implemented. For example, it could be sensible to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the platform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in 
-%\ref{label} 
-%S. 19: Majority rule is the voting system that elects the candidate who receives more than half of the votes, if such a candidate exists. If there is no such candidate, then majority rule results in a tie, with no winner elected. 
+\subsubsection{Commonly demanded properties}
+Commonly, the three properties that a voting system should fulfill in order to be fair are anonymity, neutrality and monotonicity. For the election of one out of two possible candidates, these properties are formalized as follows:
+\begin{itemize}
+\item {\textbf{Anonymity:}\footnote{This notion of anonymity is unrelated to the anonymity of a user using an app.}}:	A voting system is said to be anonymous if it treats all voters equally. In other words, if any two voters trade ballots, this shouldn't change the election's outcome. \\
+Concerning a dApp-voting-system, it is up for discussion in what way this property is wanted and how it should be implemented. For example, it could be sensible to have not total anonymity, but to give users who have a high reputation, which indicates their knowledge, or users who hold a large stake and therefore are likely to want the best for the platform, more voting power than others. Certainly it would establish an unwanted great inequality between users if the relation between voting power and reputation or stake was a linear one. We discuss this topic further in \textcolor{red}{TODO}. %TODO \ref{label} 
+\item {\textbf{Neutrality:}} A voting system is said to be neutral if it treats all candidates equally. This means that if every voter switched their vote from one candidate to another, the outcome should change accordingly. \\
+This point is not about the voters. For dApp-rating, the neutrality property is about whether the voting-evaluation algorithm treats all the dApps that are applicable to partake in the voting round equally. 
 
-$\bullet$ {\emph{Neutrality}}: A voting system is said to be neutral if it treats all candidates equally. This means that if every voter switched their vote from one candidate to another, the outcome should change accordingly. \\
-This point is not about the voters. For dApp rating, the neutrality property is about whether the voting-evaluation algorithm distinguishes all the dApps that are applicable to partake in the voting round. 
+\item {\textbf{Monotonicity:}} A voting system is said to be monotone if it is impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others.
+\end{itemize} 
+(see \cite{voting}, p. 3-4)
 
-$\bullet$ {\emph{Monotonicity}}: A voting system is said to be monotone if it is impossible for a candidate to change from winning to losing by gaining additional votes and to change from losing to winning by losing votes without gaining others. \\
+\subsubsection{Classical voting systems and their properties}
+\begin{itemize}[leftmargin = 0pt]
+\item {\textbf{Majority rule:}} This voting system elects the candidate who receives more than half of the votes, if such a candidate exists. If there is no such candidate, then majority rule results in a tie, with no winner elected.
+\end{itemize}
 
-The so-called May's Theorem states that majority rule %TODO: see \ref{} 
-is the only voting system for two-candidate-elections that is anonymous, neutral, and monotone, and that avoids the possibility of ties. For more than two candidates this is not true, since it is not guarantueed that one of the candidates is voted for by more than half of all voters. Since in the dApp-voting-system there will be more than two candidates, majority rule wouldn't fulfill %TODO and anonymity is likely an undesired feature. \\ 
-For more than two 
+\noindent $\bm{\ast}$ The so-called \textbf{May's Theorem} states that majority rule %TODO: see \ref{} 
+is the only voting system for two-candidate-elections that is anonymous, neutral, and monotone, and that avoids the possibility of ties. For more than two candidates this is not true, since it is not guaranteed that one of the candidates is voted for by more than half of all voters. \\
+Because on the dApp-platform there will be more than two candidates, and not only a winner but a whole ranking is needed, majority rule isn't the voting system to go for.
 
 %\cite{Handsonapproach} The Mathematics of Voting and Elections: A Hands-On Approach. Chapter One; maybe TODO: quota systems
+\begin{itemize}[leftmargin = 0pt, nosep]
+\item {\textbf{Plurality rule:}} One class of methods, which majority rule can be viewed as a special case of, is plurality rule. It is the voting system that elects the candidate who receives the highest number of votes, even if that number is less than half of the total number of votes cast. Here, only when two or more candidates receive the same number of votes (and more than the number of votes received by any of the other candidates), plurality method does result in a tie.
+\end{itemize}
+(see \cite{voting}, p. 5-20)\\ \\
 
-One class of methods, of which the majority rule can be viewed as a special case, is the plurality rule. It is the voting system that elects the candidate who receives the largest number of votes, even if that number is less than half of the total number of votes cast. Here, only when two or more candidates receive the same number of votes (and more than the number of votes received by any of the other candidate), the plurality method does result in a tie. \\
-Concerning an election for dApp-ranking, the possibility of ties is no downside as there is no need to determine a single winner.\\ %S. 19
-Rather, what is needed is a system that leads to some sort of preference order of all dApps. Such preference order produced by the voting system is called {\emph{societal preference order}} since it can be thought of as the ranking of the candidates that, according to the voting system being used, best reflects the voters' will. \\
+\noindent Regarding a voting system for the dApp-ranking, the possibility of ties is no downside as there is no need to determine a single winner.\\ %S. 19
+Rather, what is needed is a system that leads to some sort of preference order of all dApps. \\
+\noindent $\bm{\ast}$ Such preference order produced by the voting system is called {\textbf{societal preference order}} since it can be thought of as the ranking of the candidates that, according to the voting system being used, reflects the voters' will the best. \\ \\
 %n protip: avoid " in TeX
-There are various system that can be used to determine the societal preference order. One property of such systems that might sound sensible at first, is the following: \\
-A voting system is said to satisfy the {\emph{majority criterion}} if whenever a candidate is ranked first by a majority of the voters, that candidate will also be ranked first in the corresponding societal preference order. Below we give an example for why this would be no legitimate property for the dApp-voting-system.\\
-A voting system that does not fulfil the majority criterion is the so-called {\emph{Borda count}}, which uses a non-trivial {\emph{point system}} to determine the overall rankings and is often used in collegiate sports polls, for example. In an election with $n$ candidates it works as follows: \\
-Firstly, each voter submits a ballot that contains his or her individual preference order of all the candidates. 
-Then points are awarded to each candidate for each ballot cast, according to the following rule: 
-A $m$-place ranking is worth $n-m$ points (where $1\leq m \leq n$). In other words, a first-place ranking is worth $n-1$ points, a second-place ranking is worth $n-2$ points, and so on. 
-Finally the candidate whose total number of points from all of the ballots is the largest is declared the winner and the corresponding societal preference order is determined by the number of points each candidate has got from largest to smallest. If there is more than one candidate with the largest number of points, a tie occurs. Also some sort of tie occurs in the societal preference order whenever candidates receive the same number of total points. These candidates then occupy consecutive indistinguishable positions in the preference order. \\
-Intuitively, Borda count also appears to be quite fair. However, it violates the majority criterion. For the purpose of the dApp-voting-system we consider using some sort of variation of the Borda count more appropriate than demand the majority criterion. Imagine an extreme situation where a small majority of voters (users) rank a specific dApp at the top position place, but all of the other voters rank it last on their personal preference. Obviously, it would make no sense to declare this dApp the winner and rank it first in a societal preference order. Determining its rank according to the Borda count seems much more legitimate. Thus, a dApp-voting-system need not fulfil the majority criterion and will not use the plurality method, but rather use a variant of Borda count to guarantee a sensible societal preference order. Taking account of personal and societal preference orders, for elections with more than two candidates, the three properties of fair voting systems have to be redefined: \\
-%%n is this quite different than before? why list all again?
-$\bullet$ Anonymity: A voting system is said to be anonymous if it treats all voters equally. This means that if any two voters traded their personal preference orders, the outcome of the resulting societal preference order should not change. \\
-As mentioned before, this is no property we want the dApp-voting-system to fulfil, see \\ %\ref{}. 
-$\bullet$ Neutrality: A voting system is said to be neutral if it treats all candidates equally. This means that if every voter switched the positions of two specific candidates on their personal preference orders, the positions of these two candidates in the resulting societal preference order would be switched accordingly. \\
-$\bullet$ Monotonicity: A voting system is said to be monotone if it is impossible for a candidate to go from winning to losing or to experience a decrease in rank on the resulting societal preference order whenever changes in favour of that candidate, but no changes in disadvantage of that candidate, occur on individual preference ballots. \\
-%großes Buch wo alles drinsteht, Chapter Two
-
-A candidate who would defeat every other candidate in a head-to-head election (under majority rule) is called a {\emph{Condorcet winner}}. If a candidate would lose to every other candidate in a head-to-head contest (under majority rule) is called a {\emph{Condorcet loser}}. Two properties one clearly would want a voting system to fulfil are the following: 
-%%n those are not properties but instead definitons. ??
-\begin{enumerate}
-\item A voting system is said to satisfy the {\emph{Condorcet winner criterion (CWC)}}, if it always elects the Condorcet winner whenever one exists.
-\item A voting system is said to satisfy the {\emph{Condorcet loser criterion (CLC)}}, if it always elects the Condorcet loser whenever one exists. 
-\end{enumerate}
-These definitions involve two-candidate-elections. It can be challenging to design a voting system with more than two candidates in a way that it fulfils a Condorcet criterion. The Borda count, for example, do not (as it violates majority rule). \\
+There are various systems that can be used to determine the societal preference order. One property of such systems that might sound sensible at first, is the following: \\
+\noindent $\bm{\ast}$ A voting system is said to satisfy the {\textit{majority criterion}} if whenever a candidate is ranked first by a majority of the voters, that candidate will also be ranked first in the corresponding societal preference order. 
+\\In the following, we give an example for why this would be no legitimate property for the dApp-voting-system. \textcolor{red}{TODO?} 
+\begin{itemize}[leftmargin = 0pt, nosep] 
+\item \textbf{Borda count:} A voting system that does not fulfill the majority criterion is the so-called Borda count, which uses a non-trivial {\textsf{point system}} to determine the overall rankings and is often used in collegiate sports polls, for example. In an election with $n$ candidates it works as follows: \\
+Firstly, each voter submits a ballot that contains his or her individual preference order of all the candidates. \\
+Then points are awarded to each candidate for each ballot cast, according to the following rule: \\
+An $m$-place rank is worth $n-m$ points (where $1\leq m \leq n$). In other words, a first-place rank is worth $n-1$ points, a second-place rank is worth $n-2$ points, and so on. \\
+Finally the candidate whose total number of points from all of the ballots is the largest is declared the winner and the corresponding societal preference order is determined by the number of points each candidate has got from largest to smallest. If there is more than one candidate with the largest number of points, a tie occurs. Also some sort of tie occurs in the societal preference order whenever candidates receive the same number of total points. These candidates then occupy indistinguishable positions in the preference order and are listed consecutively.
+\end{itemize}
+(see \cite{voting}, p. 20-26) \newline
+\\ 
+Intuitively, Borda count appears to be quite fair. However, it violates the majority criterion. \\
+But for the purpose of the dApp-voting-system, using some sort of variation of the Borda count is more appropriate than demanding that the majority criterion is fulfilled: 
+\\For example, if an extreme situation is considered, in which a small majority of users ranks a specific dApp at the top position place while all of the other voters rank it last on their personal preference it would obviously make no sense to automatically rank this dApp first in the resulting societal preference order. Determining its rank according to the Borda count clearly seems much more legitimate. \\
+Thus, a voting system for ranking dApps does not have to fulfill the majority criterion and will not use plurality method, but rather use a variant of Borda count to guarantee a sensible societal preference order. \\
+ 
+Taking account of personal and societal preference orders, the three properties of fair voting systems have to be redefined for elections with more than two candidates: 
+\begin{itemize}
+\item \textbf{Anonymity:} This property stays the same.  
+\item \textbf{Neutrality:} A voting system is said to be neutral if it treats all candidates equally. This means that if every voter switched the positions of two specific candidates on their personal preference orders, the positions of these two candidates in the resulting societal preference order would be switched accordingly. 
+\item\textbf{Monotonicity:} A voting system is said to be monotone if it is impossible for a candidate to go from winning to losing or to experience a decrease in rank on the resulting societal preference order whenever changes in favor of that candidate, but no changes in disadvantage of that candidate, occur on individual preference ballots. \\
+(see \cite{voting}, p. 26-27) 
+\end{itemize}
+In this definition, the second and third property now are no longer about winning or losing, but about the ranks of the candidates in the societal preference order resulting from the personal preference orders. \\
+\\Two additional properties that seem sensible to be demanded to be fulfilled by a voting system, is to belong to both kinds of voting systems that are characterized by the following definitions, for which the terms {\textbf{Condorcet winner} and \textbf{Condorcet loser}} are needed: \\
+A candidate who would defeat every other candidate in a head-to-head election (under majority rule) is called a Condorcet winner. If a candidate would lose to every other candidate in a head-to-head contest (under majority rule), he is called a Condorcet loser. 
+\begin{itemize}
+\item \textbf{CWC:} A voting system is said to satisfy the {\textbf{Condorcet winner criterion}} (CWC), if it always elects the Condorcet winner whenever one exists.
+\item \textbf{CLC:} A voting system is said to satisfy the {\textbf{Condorcet loser criterion }} (CLC), if it always elects the Condorcet loser whenever one exists. 
+\end{itemize}
+These definitions involve two-candidate-elections. It can be challenging to design a voting system with more than two candidates in a way that it fulfills at least one of the Condorcet criterions. The Borda count, for example, does not (since it violates majority rule). \\
 %But since the Condorcet properties clearly are valuable requirements concerning a voting system, the dApp-store-voting system should fulfil them. The so-called sequential pairwise voting, which is explained in the following lines, does. A voting system we propose below, a variation of this system, turns out to do so, too.\\ %später zeigen, dass es das Kriterium erfüllt
 %Sequential pairwise voting: \\
 %To determine the winner and the societal preference order according to sequential pairwise voting, at first, the voters have to choose between two candidates. Majority rule is used to decide the winner. Next, the voters have to choose between the winner of the preceding contest and the next candidate. Then they have to choose between the winner of the latter contest and the next candidate and so on, whereby the winner always is decided according to majority rule. Finally, the winner from the last two-candidate-contest is declared the winner of the whole election. \\
