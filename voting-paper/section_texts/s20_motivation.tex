@@ -1,17 +1,19 @@
 
-\section{Introduction and review of existing platforms}
+\section{Introduction}
 \subsection{Motivation}
-In this paper, we advance the discussion of voting systems on distributed ledgers such as blockchains. The core benefit of such frameworks is  that vote-casting and voting-result-computation is perfectly transparent and thus always audible.
+he core benefit of distributed ledgers with decentralized consensus mechanisms for voting apps is that vote-casting and voting-result-computation is perfectly transparent and thus always audible.
 More concretely, we will not study the consensus protocols enabling the decentralised voting system themselves, but instead review and propose\\
 $\bullet$ algorithms for poll evaluations resulting in a sorted list\\
-$\bullet$ innovations made possible through the underlying audible framework.
+$\bullet$ innovations made possible through the underlying audible framework\\
 
 The former can manifest as a mechanism for the evaluation of opinions invoked by the voters, which, taken together, result in an average ranking. 
 One of our main motivations here is the design of a voting system for a dApps store. So while the subject of the poll algorithms discussed may be anything from politicians to fruits, we will consider the rating of software applications. 
 The vote casting actors will thus be referred to as `users` and correspond to whitelisted addresses on the decentralised ledger. 
-The whitelisting itself doesn't need to be the result of a decentralised process. 
+The whitelisting itself does not need to be the result of a decentralised process. 
 
 In this context, the most notable innovation that comes with audible polling is the notion verifiable claims for rewards based on ``on-chain`` actions. 
 For each poll or voting round, the final result can be put in context with the individual user's vote and thus used to compute a transparent reward claim tied to the user address. 
 
 A notion of reward can be realised in various forms, such as cryptocurrencies, coupons, powers or rights on the platform exposure for promotion.
+
+We will not be discussing the related topic of on-chain ID in this text, but see [cite/ref to nOS ID system].
